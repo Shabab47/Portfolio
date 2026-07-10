@@ -752,8 +752,9 @@
           btn.style.background = '#4ade80';
           form.reset();
         } else {
-          const err = await response.text();
-          throw new Error(err);
+          const errText = await response.text();
+          console.error('EmailJS Response:', response.status, errText);
+          throw new Error(errText);
         }
       } catch (err) {
         btn.innerHTML = 'Error. Try Again &#x2716;';
