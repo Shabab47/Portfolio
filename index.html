@@ -735,8 +735,8 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            service_id: 'service_47474747',
-            template_id: 'template_47474747',
+            service_id: 'service_a2xgcqk',
+            template_id: 'template_u9orlcs',
             user_id: 'hqXk3Vvb6U-Tgamhw',
             template_params: {
               from_name: document.getElementById('name').value,
@@ -758,6 +758,7 @@
       } catch (err) {
         btn.innerHTML = 'Error. Try Again &#x2716;';
         btn.style.background = '#ef4444';
+        console.error('EmailJS Error:', err);
       }
 
       setTimeout(() => {
