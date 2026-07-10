@@ -739,10 +739,9 @@
             template_id: 'template_0q0bykz',
             user_id: 'hqXk3Vvb6U-Tgamhw',
             template_params: {
-              from_name: document.getElementById('name').value,
-              from_email: document.getElementById('email').value,
-              subject: document.getElementById('subject').value || 'Portfolio Contact',
-              message: document.getElementById('message').value,
+              name: document.getElementById('name').value,
+              time: new Date().toLocaleString(),
+              message: `From: ${document.getElementById('name').value} (${document.getElementById('email').value})\nSubject: ${document.getElementById('subject').value || 'Portfolio Contact'}\n\n${document.getElementById('message').value}`,
             }
           })
         });
